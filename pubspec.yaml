@@ -21,6 +21,11 @@ dependencies:
   lottie: ^3.2.0
   smooth_page_indicator: ^1.2.1
   flutter_svg: ^2.1.0
+  firebase_core:    # Required to initialize Firebase
+  firebase_auth:    # For signup/login
+  cloud_firestore:   # For Firestore database
+  firebase_storage:   # For file storage
+  provider: 
 
 dev_dependencies:
   flutter_test:
@@ -40,3 +45,7 @@ flutter:
   assets:
     - assets/lottie/
     - assets/svg/
+
+
+ 
+       # For state management

@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
                   padding: EdgeInsets.all(30.0),
                   child: Icon(  Icons.flutter_dash, 
                     size: 100, 
-                    color: Colors.white70,
+                    color: Colors.white,
                   ),
                 ),
                 
@@ -47,19 +47,33 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 children: [
                   Expanded(
-                    child: TextField(
-                      style: const TextStyle(color: Colors.black),
-                      decoration: InputDecoration(
-                        filled: true,
-                        prefixIcon: const Icon(Icons.email, color: Colors.black54,),
-                        fillColor: Colors.white,
-                        hintText: 'Email',
-                        border: OutlineInputBorder(
+                    child: Container(
+                       decoration: BoxDecoration(
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide.none,
+                          boxShadow:const [
+                            BoxShadow(
+                              color:  Color.fromARGB(255, 10, 85, 146),
+                              blurRadius: 10,
+                              offset:  Offset(0, 5),
+                              spreadRadius: 6,
+                            )
+                          ]
                         ),
+                      child: TextField(
+                        style: const TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                          filled: true,
+                          prefixIcon: const Icon(Icons.email, color: Colors.black54,),
+                          fillColor: Colors.white,
+                          hintText: 'Email',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                        
                       ),
-                      
                     ),
                   ),
                 ],
@@ -68,19 +82,33 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 children: [
                   Expanded(
-                    child: TextField(
-                      style: const TextStyle(color: Colors.black),
-                      decoration: InputDecoration(
-                        filled: true,
-                        prefixIcon: const Icon(Icons.lock, color: Colors.black54,),
-                        fillColor: Colors.white,
-                        hintText: 'password',
-                        border: OutlineInputBorder(
+                    child: Container(
+                       decoration: BoxDecoration(
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide.none,
+                          boxShadow:const [
+                            BoxShadow(
+                              color:  Color.fromARGB(255, 10, 85, 146),
+                              blurRadius: 10,
+                              offset:  Offset(0, 5),
+                              spreadRadius: 6,
+                            )
+                          ]
                         ),
+                      child: TextField(
+                        style: const TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                          filled: true,
+                          prefixIcon: const Icon(Icons.lock, color: Colors.black54,),
+                          fillColor: Colors.white,
+                          hintText: 'password',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                        
                       ),
-                      
                     ),
                   ),
                 ],
@@ -89,10 +117,15 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                     Text('New to Todo ? Sign Up',style: TextStyle(
-                  color: Colors.white
-                ),),
-                    Text('Forgot Password ?',style: TextStyle(
+                     GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, '/signup');
+                      },
+                       child: const Text('New to Todo ? Sign Up',style: TextStyle(
+                                         color: Colors.white
+                                       ),),
+                     ),
+                    const Text('Forgot Password ?',style: TextStyle(
                       color: Colors.white
                     ), )
                   ],
@@ -102,25 +135,39 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(onPressed: () {
-                      Navigator.pushNamed(context, '/home');
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor:  const Color.fromARGB(255, 255, 255, 255),
-                      padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 15),
-                      textStyle: const TextStyle(
-                        fontSize: 15,
+                    Container(
+                       decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow:const [
+                            BoxShadow(
+                              color:  Color.fromARGB(255, 10, 85, 146),
+                              blurRadius: 10,
+                              offset:  Offset(0, 5),
+                              spreadRadius: 6,
+                            )
+                          ]
+                        ),
+                      child: ElevatedButton(onPressed: () {
+                        Navigator.pushNamed(context, '/home');
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:  const Color.fromARGB(255, 255, 255, 255),
+                        padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 15),
+                        textStyle: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ) 
+                      ), 
+                      child:  const Text('Log In',style: TextStyle(
+                        color: Colors.black87,
                         fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),),
                       ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ) 
-                    ), 
-                    child:  const Text('Log In',style: TextStyle(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),),
                     ),
                     
                   ],
@@ -151,7 +198,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-             SizedBox(height: 50,),
+             const SizedBox(height: 50,),
 
              Row(
               children: [
