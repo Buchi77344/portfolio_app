@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/components/flot.dart';
 import 'package:portfolio_app/components/list.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(colors: [Color.fromARGB(255, 3, 29, 52),Color.fromARGB(255, 2, 18, 24)])
             
-        ),
+        ), 
         
       child:  Padding(
         padding:  const EdgeInsets.all(8.0),
@@ -74,12 +75,17 @@ class _HomePageState extends State<HomePage> {
 
             const SizedBox(height: 20,),
 
-            TaskList(
-              tasks: const ['Task 1', 'Task 2', 'Task 3'],
-              onDelete: (index) {
-                // Handle delete action
-              },
+           const  TaskList(
+             
             ),
+          FloatingBounceButton(
+      text: "Click Me",
+      onPressed: () {
+        print("Button Pressed!");
+      },
+    ),
+   SizedBox(height: 40,),
+
           ],
         ),
       ),

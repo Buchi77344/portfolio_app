@@ -40,15 +40,16 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA1REpp5InONSVM3VfHYLqdTaco-uvFrnE',
-    appId: '1:700939221316:web:6c6c8490450813983b3f11',
-    messagingSenderId: '700939221316',
-    projectId: 'flutter-pro-798d2',
-    authDomain: 'flutter-pro-798d2.firebaseapp.com',
-    storageBucket: 'flutter-pro-798d2.firebasestorage.app',
-    measurementId: 'G-FGFBWHLX5P',
-  );
+static const FirebaseOptions web = FirebaseOptions(
+  apiKey: "AIzaSyA1REpp5InONSVM3VfHYLqdTaco-uvFrnE",
+  appId: "1:700939221316:web:6c6c8490450813983b3f11",
+  messagingSenderId: "700939221316",
+  projectId: "flutter-pro-798d2",
+  authDomain: "flutter-pro-798d2.firebaseapp.com",
+  storageBucket: "flutter-pro-798d2.appspot.com", // critical fix
+  measurementId: "G-FGFBWHLX5P",
+);
+
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAP2KrZ7HLbZHHeLVeYBMSA1zAQP9q1Wqs',
