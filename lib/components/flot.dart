@@ -56,7 +56,7 @@ class _FloatingBounceButtonState extends State<FloatingBounceButton>
                 backgroundColor: const Color.fromARGB(255, 26, 102, 164),
               ),
               onPressed: widget.onPressed,
-              child: Icon(Icons.add, size: 60, color: Colors.white,),
+              child: const Icon(Icons.add, size: 60, color: Colors.white,),
             ),
           ),
         );
